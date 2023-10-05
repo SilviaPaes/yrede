@@ -18,14 +18,25 @@
 
 <h1 class="w-full text-center text-xl font-bold">Cadastro de Usuários</h1>
 
-<form class="card-body max-w-md m-auto" action="" method="post">
+<form class="card-body max-w-md m-auto" action="{{route('salva-usuario')}}" method="post">
 
+@csrf
+
+<div class="form-control">
+<label class="label">
+  <span class="font-bold">Nome</span>
+</label>
+<input name="nome" type="text" placeholder="nome" class="input input-bordered" required>
+
+
+
+</div>
 
 <div class="form-control">
 <label class="label">
   <span class="font-bold">Usuário</span>
 </label>
-<input type="text" placeholder="usuario" class="input input-bordered" required>
+<input name="usuario" type="text" placeholder="usuario" class="input input-bordered" required>
 
 
 
@@ -36,9 +47,17 @@
 <label class="label">
   <span class="font-bold">Bio</span>
 </label>
-<input type="text" placeholder="Bio" class="input input-bordered" required>
+<input name="bio" type="text" placeholder="Bio" class="input input-bordered" required>
 
 
+
+</div>
+
+<div class="form-control">
+<label class="label">
+  <span class="font-bold">E-mail</span>
+</label>
+<input name="email" type="text" placeholder="Email" class="input input-bordered" required>
 
 </div>
 
@@ -46,23 +65,14 @@
 <label class="label">
   <span class="font-bold">Senha</span>
 </label>
-<input type="password" placeholder="Senha" class="input input-bordered" required>
-
-
-
-</div>
-
-<div class="form-control">
-<label class="label">
-  <span class="font-bold">Email</span>
-</label>
-<input type="text" placeholder="Email" class="input input-bordered" required>
+<input name="senha" type="password" placeholder="Senha" class="input input-bordered" required>
 
 
 
 </div>
 
 
+<button class="btn btn-success">Salvar</button>
 
 
 </form>

@@ -16,9 +16,11 @@ return new class extends Migration
             $table->string('usuario');
             $table->string('foto')->nullable();
            
+            $table->string('bio');
             $table->string('name');
            $table->string('email')->unique();
          $table->string('password');
+         $table->timestamps();
             
            
         });
