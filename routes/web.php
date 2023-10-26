@@ -46,3 +46,23 @@ $usuario->save();
 return "salvo com sucesso!";
 
 })->name('salva-usuario');
+
+Route::view('/login','login');
+
+Route::post('/logar', function (Request $request) {
+// fazer login
+
+$credentials = $request->validate([
+    'email' => ['required', 'email'],
+    'password' => ['required'],
+]);
+
+if (Auth::attempt($credentials)) {
+    $request->session()->regenerate();
+
+    return "Logado com sucesso!!";
+}
+
+
+ return "Erro ao logar!!! Usuário ou senha inválidos";
+});
