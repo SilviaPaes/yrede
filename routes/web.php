@@ -74,7 +74,7 @@ return redirect()->intended('/');
 
  return "Erro ao logar!!! Usuário ou senha inválidos";
 });
- Route::midleware(['auth'])->group(function() {
+ Route::middleware(['auth'])->group(function() {
 
     Route::view('/cria-Post','criaPost');
 

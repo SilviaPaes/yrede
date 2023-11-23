@@ -72,7 +72,7 @@
 </div>
 
 
-<button class="btn btn-success">Salvar</button>
+<button class="btn btn-success text bg blue-900">Salvar</button>
 
 
 </form>
